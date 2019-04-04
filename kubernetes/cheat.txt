@@ -1,0 +1,3 @@
+
+
+garystafford/candidate-service:kub-aks-0.5.132

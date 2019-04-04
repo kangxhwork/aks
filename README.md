@@ -1,3 +1,6 @@
+# cloned from garystafford/azure-aks-sb-cosmosdb-demo
+minimized modification to test in aks lab. kangxh.com
+
 # Azure AKS, Service Bus, and Cosmos DB Demo
 
 Project repository for my new post, [Architecting Cloud-Optimized Apps with AKS (Azure’s Managed Kubernetes), Azure Service Bus, and Cosmos DB)](https://wp.me/p1RD28-5EV). Post demonstrates how to take a modern application, like the Voter API from previous posts, and optimize it for Kubernetes in the Cloud (Kubernetes-as-a-Service), in this case, AKS, Azure’s new public preview of Managed Kubernetes for Azure Container Service. In addition to migrating to AKS, the Voter API will take advantage of additional Azure’s resources, including Azure’s Service Bus and Cosmos DB, replacements for the Voter API’s RabbitMQ and MongoDB.

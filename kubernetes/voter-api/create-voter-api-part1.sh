@@ -11,4 +11,4 @@ kubectl apply \
 	-f ./secrets/azure-cosmosdb-candidate-secret.yaml \
 	-f ./secrets/azure-cosmosdb-voter-secret.yaml \
 	-f ./secrets/azure-service-bus-secret.yaml \
- 	-f ./secrets/tls-api-voter-demo-secret.yaml
+# 	-f ./secrets/tls-api-voter-demo-secret.yaml
