@@ -29,8 +29,8 @@ spec:
           - name: SPRING_DATA_MONGODB_URI
             valueFrom:
               secretKeyRef:
-                name: azure-cosmosdb-voter
-                key: connection-string
+              name: azure-cosmosdb-voter
+              key: connection-string
                 
         command: ["/bin/sh"]
         args: ["-c", "java -Dspring.profiles.active=kub-aks -Djava.security.egd=file:/dev/./urandom -jar /voter/voter-service.jar"]

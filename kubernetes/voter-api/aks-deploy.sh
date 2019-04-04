@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# apply voter api resources part 1
-
 # namespace
 kubectl apply -f ./other/namespace.yaml
 
