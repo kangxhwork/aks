@@ -1,0 +1,15 @@
+FROM openjdk:8u131-jdk-alpine
+LABEL maintainer="kangxh"
+ENV REFRESHED_AT 2019-4
+VOLUME /tmp
+EXPOSE 8080
+RUN set -ex \
+  && apk update \
+  && apk upgrade \
+  && apk add git
+RUN mkdir /voter \
+  && git clone --depth 1 --branch voter \
+      "https://github.com/kangxhwork/aks.git" /voter
+  && cd /voter \
+  && mv voter-service-*.jar voter-service.jar
+CMD [ "java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "voter/voter-service.jar" ]
