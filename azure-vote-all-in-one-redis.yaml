@@ -39,7 +39,7 @@ metadata:
   namespace: voting
   name: azure-vote-front
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
       - name: azure-vote-front
-        image: microsoft/azure-vote-front:v1
+        image: kangxh/azure-vote-front
         ports:
         - containerPort: 80
         resources:
