@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
       - name: azure-vote-front
-        image: kangxh/azure-vote-front
+        image: kangxhacrsea.azurecr.io/azure-vote-front
         ports:
         - containerPort: 80
         resources:

@@ -2,6 +2,10 @@
 # start service on deployment server:
 sudo docker run -u root --rm -d -p 8080:8080 -p 50000:50000 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkinsci/blueocean
 
+### Manage ACR
+az acr login --name kangxhacrseasudo 
+az acr list --resource-group az-rg-kangxh-aks --query "[].{acrLoginServer:loginServer}" --output table
+sudo docker tag kangxh/azure-vote-front kangxhacrsea.azurecr.io/azure-vote-front
 
 ### check kubernetes cluster
 kubectl get node -o wide
