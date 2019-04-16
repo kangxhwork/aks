@@ -1,6 +1,18 @@
 #!/bin/bash, dX2iSKg0ynjFQ  CBTTGbfLtswbZvIAfe5Lk/YEPwpGILxUToNkVjdDI5w=
-# start service on deployment server:
-sudo docker run -u root --rm -d -p 8080:8080 -p 50000:50000 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkinsci/blueocean
+
+# Setup environment
+Jenkins: http://kangxhpipseaoss.southeastasia.cloudapp.azure.com:8080
+Grafana: http://kangxhpipseaoss.southeastasia.cloudapp.azure.com:3000 admin
+
+prometheus-alertmanager         ClusterIP   10.0.87.231    <none>        80/TCP     5h13m
+prometheus-pushgateway          ClusterIP   10.0.207.178   <none>        9091/TCP   5h13m
+prometheus-server               ClusterIP   10.0.68.176    <none>        80/TCP     5h13m
+
+kubectl --namespace monitoring port-forward prometheus-server-8666645ff5-cgm6z 9090
+
+az aks browse --resource-group az-rg-kangxh-aks --name kangxhakssea
+
+
 
 ### Manage ACR
 az acr login --name kangxhacrseasudo 
