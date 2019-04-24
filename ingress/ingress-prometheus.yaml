@@ -14,7 +14,7 @@ spec:
       - path: /prometheus
         backend:
           serviceName: prometheus-server
-          servicePort: 80
+          servicePort: 9090
       - path: /prometheuspush
         backend:
           serviceName: prometheus-pushgateway
@@ -22,4 +22,4 @@ spec:
       - path: /prometheusalert
         backend:
           serviceName: prometheus-alertmanager
-          servicePort: 80
+          servicePort: 9093
