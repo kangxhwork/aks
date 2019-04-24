@@ -1,4 +1,6 @@
-#!/bin/bash, dX2iSKg0ynjFQ  CBTTGbfLtswbZvIAfe5Lk/YEPwpGILxUToNkVjdDI5w=
+#!/bin/bash, 
+#pwd: dX2iSKg0ynjFQ  
+#spn: CBTTGbfLtswbZvIAfe5Lk/YEPwpGILxUToNkVjdDI5w=
 
 # Setup environment
 Jenkins: http://kangxhpipseaoss.southeastasia.cloudapp.azure.com:8080
