@@ -1,3 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: prometheus
+    chart: prometheus-8.9.2
+    component: server
+    release: prometheus
+  name: prometheus-server-ingress
+  namespace: monitoring
+spec:
+  ports:
+  - name: http
+    port: 9090
+    targetPort: 9090
+  selector:
+    app: prometheus
+    component: server
+    release: prometheus
+---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -13,7 +33,7 @@ spec:
       paths:
       - path: /prometheus
         backend:
-          serviceName: prometheus-server
+          serviceName: prometheus-server-ingress
           servicePort: 9090
       - path: /prometheuspush
         backend:
